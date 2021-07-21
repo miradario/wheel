@@ -1,0 +1,32 @@
+.copyright-area {
+  padding: 0px 0;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  margin-top: 136px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: -2px 4px 12px 0px #dcdcdc;
+  
+}
+
+.copyright-text p {
+  font-size: 18px;
+}
+
+.footer-menus li {
+  display: inline-flex;
+  margin-left: 20px;
+}
+
+.footer-menus li a {
+  font-size: 18px;
+  color: var(--black);
+}
+@media only screen and (max-width: 700px) {
+  .copyright-area {
+    margin-top: 0px !important;
+  }
+}

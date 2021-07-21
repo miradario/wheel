@@ -1,0 +1,362 @@
+p {
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  background: bottom;
+  border-image: round;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  outline: none !important;
+}
+
+.home {
+  position: absolute;
+  z-index: 1000;
+  width: 26px;
+  top: 40px;
+  background: #03a5c7;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 4px;
+}
+
+.prompt {
+  display: block;
+  font-size: 20px;
+}
+
+.btn {
+  margin: 0 20px 0 20px;
+  border-color: #c1cacc;
+  padding: 5px 5px !important;
+  font-size: 16px;
+  background: bottom;
+  border-image: round;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.btn-strongly-agree {
+  color: #89d298;
+  font-weight: bold;
+}
+
+.btn-strongly-agree.active,
+.btn-strongly-agree:active,
+.btn-strongly-agree:focus,
+.btn-strongly-agree:active:focus,
+.btn-strongly-agree.active:focus,
+.btn-strongly-agree:hover {
+  background-color: #89d298;
+}
+
+.btn-agree {
+  color: #89d298;
+}
+
+.btn-agree.active,
+.btn-agree:active,
+.btn-agree:focus,
+.btn-agree:active:focus,
+.btn-agree.active:focus,
+.btn-agree:hover {
+  background-color: rgba(137, 210, 152, 0.5);
+}
+
+.btn-disagree {
+  color: #e28181;
+}
+
+.btn-disagree.active,
+.btn-disagree:active,
+.btn-disagree:focus,
+.btn-disagree:active:focus,
+.btn-disagree.active:focus,
+.btn-disagree:hover {
+  background-color: rgba(226, 129, 129, 0.5);
+}
+
+.btn-strongly-disagree {
+  color: #e28181;
+  font-weight: bold;
+}
+
+.btn-strongly-disagree.active,
+.btn-strongly-disagree:active,
+.btn-strongly-disagree:focus,
+.btn-strongly-disagree:active:focus,
+.btn-strongly-disagree.active:focus,
+.btn-strongly-disagree:hover {
+  background-color: #e28181;
+}
+
+.btn-default {
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%) !important;
+  border-radius: 2rem !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important ;
+}
+span {
+  font-size: 8px;
+  color: white;
+  position: absolute;
+  top: 10px !important;
+  left: 4px;
+}
+
+.colsel {
+  background-color: #03a5c7 !important;
+}
+
+.lissel {
+  height: 111px;
+  opacity: 80%;
+  background-color: #c1cacc;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%) !important;
+  border-radius: 2rem !important;
+  border: 1px solid white !important;
+  text-align: center;
+}
+.btn-default.active:focus {
+  color: white;
+  background-color: #f17023 !important;
+  border-color: #03a5c7 !important;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%) !important;
+  border-radius: 2rem !important;
+  border: 1px solid white !important;
+}
+
+.btn-default.active,
+.btn-default:active {
+  color: white !important;
+  background-color: #03a5c7 !important;
+  border-color: #03a5c7 !important;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%) !important;
+  border-radius: 2rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important ;
+}
+
+.bottom {
+  margin-bottom: 100px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* RESULTS */
+
+.list-group-item:last-child {
+  margin-bottom: 4px !important;
+}
+
+.btn-group-justified > .btn-group .btn {
+  width: 94% !important;
+}
+
+.list-group {
+  /* padding-top: 100px; */
+  margin-bottom: 0px;
+}
+.list-group-item {
+  padding: 6px 15px;
+
+  background-color: transparent !important;
+  border: 1px solid #ddd;
+  border-color: #f17023;
+  background: bottom;
+  border-image: round;
+  box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%) !important;
+  border-radius: 2rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
+  margin-left: 12px;
+  margin: 5px;
+  margin-bottom: 3px;
+}
+
+#chartdiv {
+  font-size: 8px !important;
+  height: 300px;
+
+  width: 468px;
+  height: 400px;
+}
+
+#Dimechartdiv {
+  height: 300px;
+  font-size: 10px !important;
+}
+
+.areas {
+  text-align: center;
+  margin-bottom: 15px;
+  min-height: 95px;
+}
+
+.areas .value {
+  display: inline-block;
+  font-size: 1.3em;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.areas .value:hover {
+  background: #ecc;
+}
+
+.title-wrapper {
+  text-align: center;
+}
+
+/*  path{
+        display:none;
+    } */
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #03a5c7;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+h2 {
+  /* padding-top: 91px; */
+  color: #03a5c7;
+  font-weight: bold;
+}
+
+.logo-left {
+  padding: 10px 15px;
+}
+
+.h3,
+h3 {
+  font-size: 16px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  color: gray;
+}
+
+.top-container {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 1000;
+  background-color: white;
+}
+
+.divsubmit {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.gg-arrow-right-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  transform: scale(var(--ggs, 1.5)) !important;
+  border-radius: 4px;
+  top: 35px;
+  padding: 0px;
+  margin: 6px;
+  color: darkgray;
+}
+
+.gg-arrow-right-r::after,
+.gg-arrow-right-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: 4px;
+}
+
+.gg-arrow-right-r::after {
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  bottom: 6px;
+}
+
+.gg-arrow-right-r::before {
+  width: 10px;
+  height: 2px;
+  bottom: 8px;
+  background: currentColor;
+}
+
+.gg-arrow-left-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  transform: scale(var(--ggs, 1.5));
+  border-radius: 4px;
+  top: 35px;
+  padding: 0px;
+  margin: 6px;
+  color: darkgray;
+}
+.gg-arrow-left-r::after,
+.gg-arrow-left-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px;
+}
+.gg-arrow-left-r::after {
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 6px;
+}
+.gg-arrow-left-r::before {
+  width: 10px;
+  height: 2px;
+  bottom: 8px;
+  background: currentColor;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    position: unset;
+  }
+  #chartdiv {
+    left: -22px;
+    font-size: 8px !important;
+    height: 203px;
+    width: 283px;
+  }
+  #Dimechartdiv {
+    height: 203px;
+    font-size: 9px !important;
+  }
+}
