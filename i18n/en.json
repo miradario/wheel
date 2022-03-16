@@ -1,5 +1,5 @@
 {
-  "title": "Wheel of life",
+  "title": "The Resilience Wheel",
   "subtitle": "Welcome to the TLEX Resilience Self-Assessment ",
   "texthead1": "The Wheel of Life helps you to assess and reflect on the different areas in life which are important for strengthening resilience. Resilience can be understood as a person’s inner strength and ability to bounce back after difficult experiences and at the same time to stay optimistic and confident in the face of uncertainty and ambiguity. There are many different aspects that contribute to a person’s resilience. The Wheel of Life captures these aspects and subsumes them in 4 main dimensions and 8 sub-dimensions.",
   "texthead2": "By taking this self-assessment, you will gain insight into which areas in your life you may want to work on or put more attention to, in order to increase wellbeing and resilience. ",
@@ -14,6 +14,7 @@
   "nonbinary": "Non-binary",
   "other": "Other",
   "country": "Select Country*",
+  "select.": "Please select or Type in",
   "education": "Education",
   "less": "Less than high school",
   "high": "High school graduate or equivalent",

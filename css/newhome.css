@@ -268,7 +268,7 @@ strong {
     width: 41px;
   }
   body {
-    padding: 2.5rem;
+    padding: 0.5rem;
 }
 h1 {
   padding-top: 15px;
@@ -303,7 +303,7 @@ h1 {
 }
 .custom-select-active {
   font-size: 10px;
-  width: 290px;
+  width: 260px;
 }
 .lang{
   

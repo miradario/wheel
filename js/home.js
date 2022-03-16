@@ -138,7 +138,7 @@ var update_texts = function () {
         input.type = "text";
         mainContainer.classList.add("has-search");
         input.className = "custom-select-searchbox";
-        input.placeholder = "Enter your Search Here";
+        input.placeholder = "";
         Search.className = "search-list";
         Search.appendChild(input);
         //mainContainer.prepend(Search);

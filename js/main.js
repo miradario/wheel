@@ -802,7 +802,7 @@ function Next() {
 }
 
 function Previous() {
-  for (i = 0; i < 8; i++) {
+  for (i = 1; i < 9; i++) {
     if ($("#slide-" + i).prop("checked")) {
       $("#slide-" + (i - 1)).prop("checked", true);
       return;
