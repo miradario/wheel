@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+
 
 /* DEMO STYLES */
 * {
@@ -65,7 +65,7 @@ ul {
 
 .parent {
   width: 300px;
-  margin-bottom: 15px;
+  margin-bottom: 34px;
 }
 
 .title {
@@ -73,7 +73,11 @@ ul {
   margin-top: 12px;
   color: #f17023;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
+  width: 253px;
+  float: left;
+  text-align: right;
+  padding-right: 4px;
 }
 
 /* styles */
@@ -139,6 +143,15 @@ ul {
   padding-left: 35px;
 }
 
+.selectTeam{
+  height: 33px;
+  padding: 4px;
+  border-color: lightgrey;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 215px;
+}
+
 .custom-select-active {
   background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="50" fill="#888" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 36.4 100" style="enable-background:new 0 0 36.4 80;" xml:space="preserve"><g><path d="M18.2,50.1c-0.6,0-1.1-0.2-1.5-0.6L0.6,33.4c-0.8-0.8-0.8-2.1,0-3c0.8-0.8,2.1-0.8,3,0l14.6,14.6l14.6-14.6   c0.8-0.8,2.1-0.8,3,0c0.8,0.8,0.8,2.1,0,3L19.7,49.5C19.3,49.9,18.7,50.1,18.2,50.1z"/></g></svg>') no-repeat;
   background-position: calc(100% - 15px) center;
@@ -171,4 +184,19 @@ ul {
 
 .error {border: 1px red solid;}
 
+@media only screen and (max-width: 600px) {
+.title {
+  margin-bottom: 4px;
+  width: 222px;
+  text-align: left;
+}
+input {
+      width: 246px !important;
+}
+.parent{
+    display:contents;
+    width: 0px;
+    margin-bottom: 2px;
+}
+}
 

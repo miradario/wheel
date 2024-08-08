@@ -2,20 +2,32 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
   <title>Tlex - The Resilience Wheel</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+   
     <link rel="shortcut icon" type="image/png" href="./favicon.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./css/newhome.css">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
 
+<script src="common/jquery.js"></script>
+<script  src="./js/firebaseconn.js" ></script>
 </head>
-<body>
+<link rel="stylesheet" href="./css/gradient.css">
+<body class="gradient-background">
 <!-- partial:index.partial.html -->
 <!-- Canvas -->
-<canvas class="orb-canvas"></canvas>
+
 <!-- Overlay -->
 <div class="overlay">
   <img class="standard tlex-logo" src="https://images.assets-landingi.com/0bmtpyGZUMsBYlcM/TLEX_Logo_transparent_background.png" alt="TLEX Institute" />
@@ -26,15 +38,17 @@
       
       
        
-        <div class = "lang">
+     <div class = "lang">
           <center >
           <a href="#" class="lang-switch" data-locale="en">English</a> |
-<!--           <a href="#" class="lang-switch" data-locale="es">Español</a> | -->
+          <a href="#" class="lang-switch" data-locale="de">Deutsch</a>
+     </div> 
+<!--           <a href="#" class="lang-switch" data-locale="es">Español</a> | cerrar coment
           <a href="#" class="lang-switch" data-locale="ch">中文（繁體)</a> |
           <a href="#" class="lang-switch" data-locale="de">Deutsch</a> |
           <a href="#"  class="lang-switch" data-locale="es">Español</a>
         </center>
-        </div>
+        </div> 
     <!-- Title -->
     <h1> <span data-i18n="title" class="text-gradient" >The Resilience Wheel</span> 
     </h1>
@@ -44,29 +58,48 @@
     </h2>
     <!-- Description -->
     <p data-i18n="texthead1" class="overlay__description">
-      The Wheel of Life helps you to assess and reflect on the different areas in life which are important for strengthening resilience. Resilience can be understood as a person’s inner strength and ability to bounce back after difficult experiences and at the same time to stay optimistic and confident in the face of uncertainty and ambiguity. There are many different aspects that contribute to a person’s resilience. The Wheel of Life captures these aspects and subsumes them in 4 main dimensions and 8 sub-dimensions.
-      <strong  data-i18n="texthead2">By taking this self-assessment, you will gain insight into which areas in your life you may want to work on or put more attention to, in order to increase wellbeing and resilience.</strong>
-    </p>
-    <!-- Buttons -->
-    <div class="overlay__btns">
-
-      <!-- <button class="overlay__btn overlay__btn--transparent overlay__btn--colors">
-        <a href="https://dev.to/georgedoescode/create-a-generative-landing-page-webgl-powered-background-animation-3nl0" target="_blank">
-          Start Questionary
-        </a>
-      </button>
- -->
- 
-  <a class="abutton" href="./newform.html"
-  onclick="location.href=this.href+'?lang='+ $.i18n().locale ;return false;">
-      <button class="overlay__btn overlay__btn--colors">
-        
-        <span data-i18n="start" > Start !</span>
-        <!-- <span class="overlay__btn-emoji">👍</span> -->
+      The Resilience Wheel helps you to assess and reflect on the different areas in life which are important for strengthening resilience. Resilience can be understood as a person’s inner strength and ability to bounce back after difficult experiences and at the same time to stay optimistic and confident in the face of uncertainty and ambiguity. There are many different aspects that contribute to a person’s resilience. The Wheel of Life captures these aspects and subsumes them in 4 main dimensions and 8 sub-dimensions.
       
-      </button>
-    </a>
+    </p>
+    
+      <span  data-i18n="texthead2" class="overlay__description">
+        If you wish to assess your individual resilience please click on “Individual” to proceed. If you wish to assess Team Resilience, please contact the TLEX Office at 
+          </span>  <a data-i18n="mail" href="mailto:app@tlexinstitute.com" style="text-decoration-line: blink;"">app@tlexinstitute.com</a>  <span
+          data-i18n="texthead3" class="overlay__description"> to get access for your team.</span>
+  
+    <!-- Buttons -->
+    
+<!--  <form action="./newform.html"
+ <h4  class="title">Access Code*</h4>
+          <div class="parent">
+            <input type="text" id="code" name="code" onkeyup="EnableDisable(this)" required>
+            
+          </div>
+          <br />
+  -->
+  <center>
+      <div style="display: flex; justify-content: center;    margin-top: 20px;">
+      
+          <a class="abutton" href="./newform1.html"
+  onclick="location.href=this.href+'?type=Individual&lang='+ $.i18n().locale ;return false;" >
+   <button data-i18n="individual" type="submit" id="btnStartIndividual" name="type" value ="Individual"  class="overlay__btn overlay__btn--colors">
+     Individual
+   </button>
+        </a>
+         <a class="abutton" href="./newform1.html"
+  onclick="location.href=this.href+'?type=Team&lang='+ $.i18n().locale ;return false;" >
+          <button  type="submit" data-i18n="team" id="btnStartWorkshop" name="type" value ="Team"  class="overlay__btn overlay__btn--colors" >Team
+          </button> 
+       </a> 
+      </div>
+
+   
+
+    </center>      
+   <!--      
     </div>
+  </form> -->
+    
    <!--  <div class="privacy">
     
                  
@@ -102,9 +135,9 @@
 <script src="jquery_i18n/jquery.i18n.parser.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
-  <script type="module" src="./js/newhome.js"></script>
+  <script type="module" src="./js/newhome.js?version=11"></script>
   <script src="jquery_i18n/main-jquery_i18n.js"></script>
-  <script  src="./js/locale.js" ></script>
+  <script  src="./js/locale.js?version=11" ></script>
 
 </body>
 </html>

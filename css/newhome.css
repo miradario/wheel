@@ -42,8 +42,7 @@ body {
   place-items: center;
   padding: 2rem;
   font-family: var(--font-family);
-  color: var(--dark-color);
-  background: var(--bg-gradient);
+
 }
 
 .tlex-logo {
@@ -54,16 +53,8 @@ body {
 
 }
 
-
-
-.orb-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
+.tlex-logo img {
+  width: 200px;
 }
 
 strong {
@@ -73,14 +64,15 @@ strong {
 .overlay {
   width: 100%;
   max-width: 1140px;
-  max-height: 640px;
+  max-height: 729px;
   padding: 8rem 6rem;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.375);
+  background: rgba(255, 255, 255, 0.692);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  
 }
 
 .overlay__inner {
@@ -156,19 +148,20 @@ strong {
 }
 
 .overlay__btn {
-  width: 25%;
-  height: 2.5rem;
+  width: 30%;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: 1.375rem;
   font-weight: 600;
   color: white;
-  background:#f17023;
+  background: #f17023;
   border: none;
   border-radius: 0.5rem;
   transition: transform 150ms ease;
   outline-color: hsl(var(--hue), 95%, 50%);
+  margin-right: 71px;
 }
 
 .overlay__btn:hover {
@@ -192,12 +185,8 @@ strong {
 .lang-switch {
   text-decoration: none;
   color: var(--dark-color);
-  /* width: 100%;
- // height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-  font-size: 9px;
+
+      font-size: 12px;
 }
 .questionary{
    margin-left: 15%;
@@ -250,6 +239,24 @@ strong {
 }
 
 @media only screen and (max-width: 600px) {
+  .text-gradient {
+  background-image: none;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: gray;
+}
+
+.text-gradient2 {
+ background-image: none;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: gray;
+}
+
+  body{
+    max-width: 359px;
+    min-height: 119vh;
+  }
   .overlay__title {
     font-size: 1.25rem;
     line-height: 2rem;
@@ -273,6 +280,14 @@ strong {
 h1 {
   padding-top: 15px;
 }
+h2 {
+  font-size: 13px !important;
+}
+h6{
+      margin-top: 0px !important;
+    font-size: 10px !important;
+    width: 306px !important;
+}
 .overlay {
   padding: 0.8rem;
   width: 338px;
@@ -288,13 +303,18 @@ h1 {
     font-size: 0.75rem;
     margin-right: 0;
     height: 1.5rem;
+   
   }
 
   .overlay__btn:first-child {
-    width: 138px !important;
-    padding: 3px;
-    margin-bottom: 5px;
-    margin-top: -3px;
+    width: 154px !important;
+    height: 22px;
+    margin-bottom: 19px;
+    margin-right: auto;
+    margin: 2px;
+
+    
+    
   }
   
   .custom-select {
@@ -310,18 +330,19 @@ h1 {
   margin-top: 11px;
 }
 #form-demo {
-  padding: 5px;
-  width: 227px;
+ padding: 2px !important; 
+ width: 353px;
 }
 .form-check{
-  padding: 5px;
-    width: 298px;
-    margin-left: -36px;
+width: 263px;
+    margin-left: -27px;
+    display: flex;
+  padding:0px !important;
 }
 
 .privacy{
-  margin-top: 578px !important;
-  margin-left: -22px;
+    margin-top: 653px !important;
+    margin-left: -92px;
 }
 
 .questionary{

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <title>The Resilience Wheel</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+    
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/newhome.css?version=11">
+<link rel="stylesheet" href="./css/carousel.css?version=11">
+<link rel="stylesheet" href="./css/test.css?version=11">
+<link rel="stylesheet" href="./css/gradient.css?version=11">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body class="gradient-background">
+
+<!-- partial:index.partial.html -->
+
+<!-- Overlay -->
+<div class="overlay">
+  
+  <!-- Overlay inner wrapper -->
+  <div id="overlay" class="overlay__inner" style="max-width: 104rem;">
+      
+    
+    
+          <div class="carousel">
+            <a href="./index.html"><img  src="./images/home.svg" class="home"></a>
+   
+              <input type="radio" name="slides" checked="checked" id="slide-1">
+              <input type="radio" name="slides" id="slide-2">
+              <input type="radio" name="slides" id="slide-3">
+              <input type="radio" name="slides" id="slide-4">
+              <input type="radio" name="slides" id="slide-5">
+              <input type="radio" name="slides" id="slide-6">
+              <input type="radio" name="slides" id="slide-7">
+              <input type="radio" name="slides" id="slide-8">
+
+              <ul id="quiz" class="carousel__slides">
+               </ul>    
+              <ul id="quizsel" class="carousel__thumbnails">
+                 <div onclick="Previous()">
+                    <i class="gg-arrow-left-r"></i>
+                  </div>
+                  <li id="lis-1" class="lissel" >
+                    <label  class="lblimages" for="slide-1"> 
+                           
+                          <img  id="img-1" src="./images/mind.svg"  alt="fb-logo" class="icon">
+                          <span  data-i18n="catshort1" class="lblfim" />
+                          
+                    </label>                          
+                        
+                        
+                      
+                  </li>
+                  <li id="lis-2"class="lissel"  >
+
+                      <label  for="slide-2" class="lblimages" > 
+                         
+                         
+                         <img  id="img-2" src="./images/recomwhite.svg" alt="fb-logo" class="icon">
+                         <span  data-i18n="catshort2" class="lblfim" />
+                        </label>
+                  </li>
+                  <li id="lis-3"class="lissel"  >
+                    <label   for="slide-3" class="lblimages" >
+                      <img  id="img-3" src="./images/salud.svg" alt=""  class="icon">
+                      <span  data-i18n="catshort3" class="lblfim" />
+                      
+                    </label>
+                </li>
+                <li id="lis-4" class="lissel" >
+                  <label for="slide-4" class="lblimages" >
+                    <img id="img-4" src="./images/dinero.svg" alt=""  class="icon">
+                    <span  data-i18n="catshort4" class="lblfim" />
+                  </label>
+              </li>
+                <li id="lis-5" class="lissel">
+                    <label for="slide-5" class="lblimages" >
+                      <img id="img-5" src="./images/relacion.svg" alt=""  class="icon ">
+                      <span  data-i18n="catshort5" class="lblfim" />
+                    </label>
+
+                </li>
+                <li id="lis-6" class="lissel" >
+                    <label for="slide-6" class="lblimages" >
+                      <img id="img-6" src="./images/terapia-de-pareja.svg" alt="" class="icon">
+                      <span  data-i18n="catshort6" class="lblfim" />
+                    </label>
+                </li>
+                <li id="lis-7" class="lissel" >
+                    <label  for="slide-7" class="lblimages" >
+                      <img  id="img-7" src="./images/grupo.svg" alt="" class="icon">
+                      <span  data-i18n="catshort7" class="lblfim"  />
+                    </label>
+                </li>
+                <li id="lis-8" class="lissel" >
+                    <label  for="slide-8" class="lblimages" >
+                      <img  id="img-8" src="./images/conciencia-de-si-mismo.svg" alt="" class="icon">
+                      <span data-i18n="catshort8" class="lblfim"  />
+                    </label>
+                </li>
+                <div onclick="Next()">
+                  <i class="gg-arrow-right-r"></i>
+                </div>
+                
+                
+              </ul>
+          </div>
+   
+
+      <div class="text-center">
+        <ul id="quiz" class="list-group">
+        </ul>
+      </div>
+      
+      <div id="minichartdiv"  style="  display: none;  left: 65%;
+      top: 120px;
+      position: fixed;
+      font-size: 10px;
+      height: 180px;
+      width: 345px; "> 
+        </div> 
+        <div class=" text-center results hide">
+          <p id="results"></p>
+        </div>
+        <div class="overlay__btns">
+          <button id="submit-btn" data-i18n="submit" class="overlay__btn overlay__btn--colors hide" style="    top: 336px;
+          left: 71.5%;
+          width: 160px;
+          
+          font-size: 12px;">Submit</button>
+      
+      <button id="retake-btn2" data-i18n="retake" class="overlay__btn overlay__btn--colors hide" style="     top: 524px;
+      left: 69%;
+      width: 160px;
+      position: fixed;
+      font-size: 12px; ">Retake Wheel</button>
+        </div>
+      
+                     
+     
+        </div>
+
+        
+    <div class="text-center hide results">
+		    
+          <div class="row">
+            <div class="col-sm-6" >
+              <span data-i18n="wheel" class="text-gradient2" style="font-size: 30px; top:10px" >Resilience Wheel</span> 
+                <div id="chartdiv"  ></div>
+             </div>
+            <div class="col-sm-6" >
+              <span data-i18n="4D" class="text-gradient" style="font-size: 30px; top:10px" >4 Dimesions</span> 
+              <div id="Dimechartdiv" ></div>
+            </div>
+          
+          <div class="row" ></div>	
+          <div class="col-sm-6" >
+          <input type="button" id="download" style="margin-top: 20px;     width: auto;" class="btn btn-primary btn-lg" value="Download PDF" onclick="savePDF('save');" />
+          </div>		
+          <div class="col-sm-6" style="padding-top: 10px;">
+          <input type="email" id="email" style="font-size: 12px; 			width: 60%;  " name="" placeholder="Send Email PDF">
+          <span class="message success hide" data-i18n="email_valid" >Email valid</span>
+          <span class="message error hide" data-i18n="email_notvalid">Email not valid</span>	
+          
+          <input type="button" id="send" style="display:none; width: auto;  margin-top: 10px;" class="btn btn-primary btn-lg"  value="Send Email PDF" onclick="savePDF('send');" />	
+          
+          <button id="retake-btn" data-i18n="retake" class="overlay__btn overlay__btn--colors " style="         top: 538px;
+      left: 65%;
+      width: 131px;
+      position: fixed;
+      font-size: 12px;  ">Retake Wheel</button>
+
+          </div>
+        </div>
+    
+      
+      
+    </div>	
+ 
+    </div>
+  </div>
+
+
+<!-- partial -->
+<script src="./common/jquery.js"></script>
+<script src="./jquery_i18n/CLDRPluralRuleParser.js"></script>
+<script src="./jquery_i18n/jquery.i18n.js"></script>
+<script src="./jquery_i18n/jquery.i18n.messagestore.js"></script>
+<script src="./jquery_i18n/jquery.i18n.fallbacks.js"></script>
+<script src="./jquery_i18n/jquery.i18n.language.js"></script>
+<script src="./jquery_i18n/jquery.i18n.parser.js"></script>
+<script src="./jquery_i18n/jquery.i18n.emitter.js"></script>
+<script src="./jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+  
+  <script src="jquery_i18n/main-jquery_i18n.js"></script>
+  <script  src="./js/firebaseconn.js"></script>
+  <script  src="./js/locale.js" ></script>
+<!-- partial:index.partial.html -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js'></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+
+  <script  src="./base64/en/page1.js?version=11" ></script>
+  <script  src="./base64/en/page2.js?version=11" ></script>
+  <script  src="./base64/en/page3.js?version=11" ></script>
+  <script  src="./base64/ge/page1.js?version=11" ></script>
+  <script  src="./base64/ge/page2.js?version=11" ></script>
+  <script  src="./base64/ge/page3.js?version=11" ></script>
+ 	<script  src="./js/main.js?version=11" ></script>
+</body>
+</html>

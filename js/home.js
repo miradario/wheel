@@ -350,35 +350,6 @@ var update_texts = function () {
   });
 })();
 
-var firebase;
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
-  apiKey: "AIzaSyAs47wGjhEiHT-6mcsGcCb36UZXbAjQgqU",
-  authDomain: "resilience-c37d0.firebaseapp.com",
-  projectId: "resilience-c37d0",
-  storageBucket: "resilience-c37d0.appspot.com",
-  messagingSenderId: "934257465378",
-  appId: "1:934257465378:web:daa534b74e1e0b5560927b",
-  measurementId: "G-LN4JPD9B9J",
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-var formDemo;
-var modo = "UPDATE";
-var refFirebase;
-var userfb = "miradario@gmail.com";
-var passfb = "mira4200";
-
-firebase
-  .auth()
-  .signInWithEmailAndPassword(userfb, passfb)
-  .then(function (result) {})
-  .catch(function (error) {
-    alert("Error in user connection. Please logout and login again");
-  });
-
 function inicializar() {
   update_texts();
 
@@ -395,6 +366,11 @@ var iduser;
 var ukey;
 
 function enviaraFirebase(event) {
+  var isWorkshop;
+  const workshop = document.getElementById("Textworkshop").value;
+  const team = document.getElementById("selectTeam").value;
+  const page = workshop == "" ? "newmain1" : "maingroup";
+  console.log("page" + page);
   if (
     document.getElementById("gender").value != "" &&
     document.getElementById("country").value != ""
@@ -403,16 +379,25 @@ function enviaraFirebase(event) {
     iduser = refFirebase
       .push({
         // name: event.target.name.value,
-        // email: event.target.email.value,
+        workshop: workshop,
         gender: event.target.gender.value,
         education: event.target.education.value,
         occupation: event.target.occupation.value,
         country: event.target.country.value,
+        team: event.target.selectTeam.value,
       })
       .then(function (result) {
         ukey = result.key;
         window.location.href =
-          "newmain.html?ukey=" + ukey + "&lang=" + $.i18n().locale;
+          page +
+          ".html?ukey=" +
+          ukey +
+          "&lang=" +
+          $.i18n().locale +
+          "&work=" +
+          workshop +
+          "&team=" +
+          team;
       })
       .catch(function (error) {
         alert("User is not correct. Please contact Administrator");

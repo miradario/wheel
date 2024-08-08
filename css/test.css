@@ -1,5 +1,5 @@
 p {
-  font-size: 16px;
+  font-size: 19px;
 }
 
 button {
@@ -12,11 +12,15 @@ button {
   outline: none !important;
 }
 
+h6 .h6 {
+  color: #09a4c3;
+}
+
 .home {
   position: absolute;
   z-index: 1000;
   width: 26px;
-  top: 94px;
+  /*  top: 116px; */
   background: #03a5c7;
   box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%);
   border-radius: 2rem;
@@ -117,16 +121,21 @@ span {
 
 .colsel {
   background-color: #03a5c7 !important;
+  pointer-events: inherit !important;
 }
 
 .lissel {
-  height: 60px;
+  height: 58px;
   opacity: 70%;
-  background-color: #919191;
+  background-color: #f17023;
   box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%) !important;
   border-radius: 2rem !important;
   border: 1px solid white !important;
   text-align: center;
+  pointer-events: none;
+}
+.lisselgroup {
+  height: 20px !important;
 }
 
 .btn-default.active:focus {
@@ -193,8 +202,8 @@ span {
 #chartdiv {
   font-size: 8px !important;
   height: 300px;
+  width: 573px;
 
-  width: 468px;
   height: 400px;
 }
 
@@ -357,9 +366,9 @@ h3 {
   }
   #chartdiv {
     left: -22px;
-    font-size: 8px !important;
+    font-size: 7px !important;
     height: 203px;
-    width: 283px;
+    width: 341px;
   }
   #Dimechartdiv {
     height: 203px;
@@ -371,6 +380,11 @@ h3 {
     width: 21px;
     height: 22px;
   }
+
+  .lisselgroup {
+    height: 20px !important;
+  }
+
   span {
     top: 10px !important;
   }
