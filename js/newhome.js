@@ -1,6 +1,6 @@
-import * as PIXI from "https://cdn.skypack.dev/pixi.js";
+import * as PIXI from "https://cdn.skypack.dev/pixi.js@7.1.1";
 import { KawaseBlurFilter } from "https://cdn.skypack.dev/@pixi/filter-kawase-blur";
-import SimplexNoise from "https://cdn.skypack.dev/simplex-noise";
+
 import hsl from "https://cdn.skypack.dev/hsl-to-hex";
 import debounce from "https://cdn.skypack.dev/debounce";
 
@@ -13,9 +13,6 @@ function random(min, max) {
 function map(n, start1, end1, start2, end2) {
   return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
 }
-
-// Create a new simplex noise instance
-const simplex = new SimplexNoise();
 
 // ColorPalette class
 class ColorPalette {

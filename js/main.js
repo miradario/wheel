@@ -48,24 +48,28 @@ function loadVars() {
     {
       prompt: $.i18n("p0"),
       weight: 1,
+      value: 0,
       class: "group0",
       category: 0,
     },
     {
       prompt: $.i18n("p1"),
       weight: 1,
+      value: 0,
       class: "group1",
       category: 0,
     },
     {
       prompt: $.i18n("p2"),
       weight: 1,
+      value: 0,
       class: "group2",
       category: 0,
     },
     {
       prompt: $.i18n("p3"),
       weight: 1,
+      value: 0,
       class: "group3",
       category: 0,
     },
@@ -73,24 +77,28 @@ function loadVars() {
     {
       prompt: $.i18n("p4"),
       weight: 1,
+      value: 0,
       class: "group4",
       category: 1,
     },
     {
       prompt: $.i18n("p5"),
       weight: 1,
+      value: 0,
       class: "group5",
       category: 1,
     },
     {
       prompt: $.i18n("p6"),
       weight: 1,
+      value: 0,
       class: "group6",
       category: 1,
     },
     {
       prompt: $.i18n("p7"),
       weight: 1,
+      value: 0,
       class: "group7",
       category: 1,
     },
@@ -98,24 +106,28 @@ function loadVars() {
     {
       prompt: $.i18n("p8"),
       weight: 1,
+      value: 0,
       class: "group8",
       category: 2,
     },
     {
       prompt: $.i18n("p9"),
       weight: 1,
+      value: 0,
       class: "group9",
       category: 2,
     },
     {
       prompt: $.i18n("p10"),
       weight: 1,
+      value: 0,
       class: "group10",
       category: 2,
     },
     {
       prompt: $.i18n("p11"),
       weight: 1,
+      value: 0,
       class: "group11",
       category: 2,
     },
@@ -123,24 +135,28 @@ function loadVars() {
     {
       prompt: $.i18n("p12"),
       weight: 1,
+      value: 0,
       class: "group12",
       category: 3,
     },
     {
       prompt: $.i18n("p13"),
       weight: 1,
+      value: 0,
       class: "group13",
       category: 3,
     },
     {
       prompt: $.i18n("p14"),
       weight: 1,
+      value: 0,
       class: "group14",
       category: 3,
     },
     {
       prompt: $.i18n("p15"),
       weight: 1,
+      value: 0,
       class: "group15",
       category: 3,
     },
@@ -148,24 +164,28 @@ function loadVars() {
     {
       prompt: $.i18n("p16"),
       weight: 1,
+      value: 0,
       class: "group16",
       category: 4,
     },
     {
       prompt: $.i18n("p17"),
       weight: 1,
+      value: 0,
       class: "group17",
       category: 4,
     },
     {
       prompt: $.i18n("p18"),
       weight: 1,
+      value: 0,
       class: "group18",
       category: 4,
     },
     {
       prompt: $.i18n("p19"),
       weight: 1,
+      value: 0,
       class: "group19",
       category: 4,
     },
@@ -173,24 +193,28 @@ function loadVars() {
     {
       prompt: $.i18n("p20"),
       weight: 1,
+      value: 0,
       class: "group20",
       category: 5,
     },
     {
       prompt: $.i18n("p21"),
       weight: 1,
+      value: 0,
       class: "group21",
       category: 5,
     },
     {
       prompt: $.i18n("p22"),
       weight: 1,
+      value: 0,
       class: "group22",
       category: 5,
     },
     {
       prompt: $.i18n("p23"),
       weight: 1,
+      value: 0,
       class: "group23",
       category: 5,
     },
@@ -198,24 +222,28 @@ function loadVars() {
     {
       prompt: $.i18n("p24"),
       weight: 1,
+      value: 0,
       class: "group24",
       category: 6,
     },
     {
       prompt: $.i18n("p25"),
       weight: 1,
+      value: 0,
       class: "group25",
       category: 6,
     },
     {
       prompt: $.i18n("p26"),
       weight: 1,
+      value: 0,
       class: "group26",
       category: 6,
     },
     {
       prompt: $.i18n("p27"),
       weight: 1,
+      value: 0,
       class: "group27",
       category: 6,
     },
@@ -223,24 +251,28 @@ function loadVars() {
     {
       prompt: $.i18n("p28"),
       weight: 1,
+      value: 0,
       class: "group28",
       category: 7,
     },
     {
       prompt: $.i18n("p29"),
       weight: 1,
+      value: 0,
       class: "group29",
       category: 7,
     },
     {
       prompt: $.i18n("p30"),
       weight: 1,
+      value: 0,
       class: "group30",
       category: 7,
     },
     {
       prompt: $.i18n("p31"),
       weight: 1,
+      value: 0,
       class: "group31",
       category: 7,
     },
@@ -347,7 +379,14 @@ function loadVars() {
     var cat = findPromptCat(prompts, this_group);
     total -= findPromptWeight(prompts, this_group);
 
+    var sel = parseInt(classList.replace("group", ""));
+    console.log("Sel", sel);
+
     totalCat[cat].total -=
+      findPromptWeight(prompts, this_group) *
+      findValueWeight(prompt_values, $("." + this_group + ".active").text());
+
+    prompts[sel].value -=
       findPromptWeight(prompts, this_group) *
       findValueWeight(prompt_values, $("." + this_group + ".active").text());
 
@@ -362,6 +401,10 @@ function loadVars() {
     totalCat[cat].total +=
       findPromptWeight(prompts, this_group) *
       findValueWeight(prompt_values, $(this).text());
+
+    prompts[sel].value +=
+      findPromptWeight(prompts, this_group) *
+      findValueWeight(prompt_values, $("." + this_group + ".active").text());
 
     totalCat[cat].avg = totalCat[cat].total / totalCat[cat].cant;
     if (totalCat[cat].cant == 4) {
@@ -793,7 +836,7 @@ function findValueWeight(values, value) {
 }
 
 function Next() {
-  for (i = 0; i < 8; i++) {
+  for (i = 0; i < 40; i++) {
     if ($("#slide-" + i).prop("checked")) {
       $("#slide-" + (i + 1)).prop("checked", true);
       return;
@@ -846,6 +889,7 @@ $("#submit-btn").click(function () {
     refFirebase.update({
       Dime: totalDime,
       Avg: totalCat,
+      prompts: prompts,
     });
   }
 
@@ -948,18 +992,35 @@ function minisetValue(index, value) {
   }
 }
 
+let page1show;
+let page2show;
+let page3show;
+
 var filename;
+
+if ($.i18n().locale == "de") {
+  page1show = page1ge;
+  page2show = page2ge;
+  page3show = page3ge;
+  filename = "Ergebnis_des_Resilienzrades.pdf";
+} else {
+  page1show = page1;
+  page2show = page2;
+  page3show = page3;
+  filename = "Wheel_of_life_Results.pdf";
+}
+
 function savePDF(action) {
-  filename = "wheel.pdf";
   var logotlex =
     "data:image/png;base64,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";
+
   Promise.all([
     chart.exporting.pdfmake,
     chart.exporting.getImage("png"),
     Dimechart.exporting.getImage("png"),
   ]).then(function (res) {
     var pdfMake = res[0];
-    var title = $.i18n("title");
+    var title = $.i18n("wheel");
     var fourd = $.i18n("4D");
     if ($.i18n().locale == "ch") {
       title = "";
@@ -975,6 +1036,26 @@ function savePDF(action) {
       content: [],
     };
 
+    /*
+     */
+    doc.content.push({
+      image: page1show,
+      width: 571,
+      height: 808.2,
+    });
+
+    doc.content.push({
+      image: page2show,
+      width: 571,
+      height: 808.2,
+    });
+
+    doc.content.push({
+      image: page3show,
+      width: 571,
+      height: 808.2,
+    });
+
     doc.content.push({
       image: logotlex,
       width: 60,
@@ -982,8 +1063,10 @@ function savePDF(action) {
 
     doc.content.push({
       text: title,
-      fontSize: 20,
-
+      fontSize: 23,
+      fontFeatures: "Avenir",
+      bold: true,
+      color: "#03a5c7",
       margin: [0, 20, 0, 15],
     });
 
@@ -994,8 +1077,9 @@ function savePDF(action) {
 
     doc.content.push({
       text: fourd,
-      fontSize: 18,
+      fontSize: 23,
       bold: true,
+      color: "#03a5c7",
       margin: [0, 20, 0, 15],
     });
 
@@ -1011,38 +1095,83 @@ function savePDF(action) {
     if (action == "send") {
       pdfMake.createPdf(doc).getBase64(function (encodedString) {
         data = encodedString;
-        sendEmail(data);
+        sendNewEmail(data);
       });
     }
   });
 }
-var body;
-function sendEmail(pdfBase64) {
-  alert($.i18n("sent"));
 
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "resilience@tlexinstitute.com",
-    Password: "ziwqe7-kiwcov-vefhiV",
-    To: document.getElementById("email").value,
-    From: "resilience@tlexinstitute.com",
-    Subject: $.i18n("emailsubject"),
-    Body: $.i18n("emailbody"),
-    Attachments: [
-      {
-        name: filename,
-        data: pdfBase64,
-      },
-    ],
-  })
-    .then(() => {
-      console.log("Email enviado");
-    })
-    .catch((error) => {
-      Alert(error);
-    });
+function sendNewEmail(data) {
+  /*  labels(); */
+
+  $("body").css("cursor", "progress");
+  $.ajax({
+    type: "POST",
+    async: true,
+    url: "PHPMailer/process.php",
+    data: jQuery.param({
+      subject: $.i18n("emailsubject"),
+      body: $.i18n("emailbody"),
+      email: document.getElementById("email").value,
+      filename: filename,
+      data: data,
+    }),
+    datatype: "json",
+    cache: true,
+    global: false,
+    beforeSend: function () {},
+    success: function (data) {
+      if (data == "success") {
+        console.log("sent" + data);
+        $("body").css("cursor", "default");
+      } else {
+        $(".no-config").show();
+        $("body").css("cursor", "default");
+        console.log("nosent" + data);
+      }
+    },
+    complete: function () {
+      $("body").css("cursor", "default");
+      //  nolabels();
+      alert($.i18n("emailsucces"));
+      $("#loader").hide();
+    },
+  });
 }
+/* 
+function sendNewEmail(data) {
+  $.ajax({
+    type: "POST",
+    async: true,
+    url: "PHPMailer/process.php",
+    data: jQuery.param({
+      subject: $.i18n("emailsubject"),
+      body: $.i18n("emailbody"),
+      email: document.getElementById("email").value,
+      filename: filename,
+      pdf: data,
+    }),
+    datatype: "json",
+    cache: true,
+    global: false,
+    beforeSend: function () {
+      $("#loader").show();
+    },
+    success: function (data) {
+      if (data == "success") {
+        console.log("sent" + data);
+      } else {
+        $(".no-config").show();
+        console.log("nosent" + data);
+      }
+    },
+    complete: function () {
+      $("#loader").hide();
+    },
+  });
+} */
 
+var body;
 var valid;
 
 function success() {
